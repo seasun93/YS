@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>손용수공부할수이써</title>
+    </head>
+    <body>
+        <div class="headTag" style="display: none;">
+            제목 태그 : h (블록)
+            <h1>손용수</h1> : 사이트의 이름 , 애플, apple ,로고,
+            <h2>그만자</h2> : 메뉴들, mac, iphone, ipad, 등
+            <h3>집중해</h3>
+            ---------------------
+            <h4>공부해</h4>
+            -------------------------
+            <h5>자면안돼</h5>
+            <h6>마지막사이즈</h6>
+
+            중요도에 따른 제목 설정
+            5 6 더 많이 사용하는 태그들이 존재 굳이 사용 안함
+        </div>
+        <div class="contentTag" style="display: none;">
+            내용 태그 : p (블록)
+            <p>html 태그 외우기 힘들어? 용수 바보 아니야</p>
+            <p>두번째 p 태그 위치</p>
+        </div>
+        <table>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+            <tr>
+                <td>전다해</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>손용수</td>
+                <td>31</td>
+            </tr>
+        </table>
+    </body>
+</html>
