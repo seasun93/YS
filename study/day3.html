@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>용수 공부장 | day3</title>
+    <style>
+        pre {white-space: pre-line;}
+        code {background: #eee; display: block; padding: 10px;}
+        pre {font-style:normal;}
+    </style>
+</head>
+<body>
+    <div class="css">
+        <h1>태그와 css, reset</h1>
+        <pre>
+    기본적으로 모든 태그에 margin(바깥여백)과 padding(안쪽여백)이 들어가 있으며 몇몇 태그(em, strong)에는 태그 고유의 css(디자인)가(이) 존재한다. 때문에 html을 꾸미는 작업을 하기 위해서는 고유css를 전체적으로 한번 초기화 해주는 작업이 필요하다.
+    reset 작업을 할때는 본인이 사용하는 태그들을 나열하고 기본 reset, 그리고 기본 reset에 포함되어있지 않는 고유css 초기화를 해준다.
+
+
+    아래 코드 예시(태그는 극히 일부만 사용한 것)
+
+    <code>
+body, html { padding:0; margin:0; }
+h1,h2,h3,h4,h5,h6,p,div,a,span,em,ul,li,main,header,footer,section,article,table,tr,td,th {
+            font-size:16px; line-height:1; font-weight:normal; font-style:normal; font-family:'noto-sans KR', sans-serif; padding:0;margin:0;
+        }
+    </code>
+
+    font-size : 폰트의 사이즈
+    font-weight : 폰트의 굵기 (기본값, noraml 혹은 400)
+    font-style : 폰트의 기울임 (기본값, normal)
+    font-family : 폰트의 글꼴 (원하는 글꼴 삽입 가능)
+    line-height : 줄간격 (기본값 1) 
+    padding : 안쪽여백 (기본값 0)
+    margin : 바깥쪽여백 (기본값 0)
+
+    이 외에도 다양한 css 초기화작업이 존재한다.
+    <span style="color:red; font-weight: 600;">자기만의 reset.css를 만들어보자.</span>
+        </pre>
+    </div>
+    <hr>
+    <div class="class">
+        <h1>태그와 id, class</h1>
+        <pre>
+    css 작업, script작업할때 필요한 id와 class
+    특히 css 작업할때 class나 id 값을 줌으로써 작업하기 수월해 질 수있다.
+
+    예를 들어
+    <div style="display: flex; width: 100%;">
+        <xmp style="background: #333; color:#fff; display: block; width: 100%;">
+    <div>
+        <h1>class없는 css</h1>
+        <div>
+            <div>
+                <h2>구역1</h2>
+                <div>
+                    <p>내용1</p>
+                    <p>내용2</p>
+                    <p>내용3</p>
+                </div>
+            </div>
+            <div>
+                <h2>구역2</h2>
+                <div>
+                    <a href="">링크1</a>
+                    <a href="">링크2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+            </xmp>
+            <xmp style="background: #333; color:#fff; display: block; width: 100%;">
+    <div>
+        <h1>class있는 css</h1>
+        <div id='wrap'>
+            <div class="section1">
+                <h2>구역1</h2>
+                <div class="content">
+                    <p>내용1</p>
+                    <p class="point">내용2</p>
+                    <p>내용3</p>
+                </div>
+            </div>
+            <div class="section1">
+                <h2>구역2</h2>
+                <div class="link">
+                    <a href="">링크1</a>
+                    <a href="" id="linkRoute">링크2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </xmp>
+    </div>
+
+    위의 코드처럼 생겼다면.
+    <div>
+        <code>
+            class가 없는 경우 : 불특정 다수 태그들이 동시에 css가 먹게된다.
+            div {font-size:20px}
+            /* 하나의 div 뿐만 아니라 모든 div에 font-size: 20px이 들어간다. */
+            div div {border:1px solid red}
+            /*div 밑에 div가 자식으로 있는 모든 태그에 border css가 들어간다.*/
+            
+        </code>
+        <code>
+            class가 존재하는 경우 : 태그들을 구분짓고, 각각 개별 css를 줄 수 있어진다.
+            #wrap {}
+            #wrap .section1 {}
+            #wrap .section1 .conent {}
+            #wrap .section1 .conent p {}
+            #wrap .section1 .conent p.point {}
+            #wrap .section2 {}
+            #wrap .section2 .link {}
+        </code>
+    </div>
+        </pre>
+        <div class="classInfo">
+            <h2>class와 id</h2>
+            <div class="classWrap">
+                <h3>class</h3>
+                <ul>
+                    <li>하나 혹은 여러개 사용 가능</li>
+                    <li>클래스는 여러개에 동시에 사용이 가능한데 똑같은 css를 주고 싶을 때 태그에 동일한 class를 넣어 하나의 class에 css 입력을 하면 태그가 다르더라도 같은 css값이 작용한다.</li>
+                    <li>html 작업시 .클래스명 입력 후 탭을 누르면 자동으로 생성이 되고 아니면 p class="클래스명" 이렇게 입력을 한다.</li>
+                    <li>css 작업시 class는 .클래스명으로 사용된다.(class가 존재하는 경우 참조)</li>
+                </ul>
+            </div>
+            <div class="idWrap">
+                <h3>id</h3>
+                <ul>
+                    <li>무조건 하나만 존재</li>
+                    <li>html 작업시 #아이디명 입력 후 탭 혹은 p id='아이디명' 입력을 해준다 p와 id사이에는 공백이 들어가야한다.</li>
+                    <li>css 작업시 id는 #아이디명 으로 사용된다.(class가 존재하는 경우 참조)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
