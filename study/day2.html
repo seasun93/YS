@@ -7,6 +7,93 @@
     <title>용수 공부장 | day2</title>
 </head>
 <body>
-    
+    <div class="structure">
+        <h1>웹사이트의 구조</h1>
+        <pre style="white-space: pre-line;">
+            대게 웹사이트를 구성할때는 비슷한 내용끼리 div로 묶어서 영역을 구분한다. 
+            보통 메뉴(header)/컨텐츠(div, section)/사이트정보(footer)로 나뉘는데 css나 js에 따라 감싸주는 div가 더 늘어나기도 한다. 대부분의 사이트들은 메뉴와 사이트정보는 필수여서 컨텐츠 영역만 바꿔주기도 한다.
+        </pre>
+        <ul>
+            <li>
+                <h2>메뉴영역</h2>
+                <p>메뉴 영역은 대게 로고와 메뉴 리스트들을 말한다.</p>
+<xmp>
+    중메뉴(서브메뉴)가 없는 버전
+    <header>
+        <h1><a href="#">로고위치</a></h1>
+        <nav>
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴2</a>
+            <a href="#">메뉴3</a>
+        </nav>
+    </header>
+
+    중메뉴(서브메뉴)가 있는 버전
+    <header>
+        <h1><a href="#">로고위치</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li>
+                    <a href="#">메뉴3</a>
+                    <ul>
+                        <li><a href="#">메뉴3-1</a></li>
+                        <li><a href="#">메뉴3-2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</xmp>
+                <p>메뉴 영역의 nav 태그 안에 중메뉴(서브메뉴)가 없는 경우에는 nav에 a태그 또는 nav안에 ul, li태그를 이용하고, 중메뉴가 있는 경우에는 무조건 ul에 li를 이용한다.</p>
+            </li>
+            <li>
+                <h2>컨텐츠 영역</h2>
+                <p>우리가 넣고자하는 내용들을 성격이 비슷한 것들 끼리 묶어(div)주는데 이 묶음들의 모음을 컨텐츠 영역이라고 한다.</p>
+<xmp>
+    <section>
+        <h2>컨텐츠영역예시</h2>
+        <div>
+            <h3>컨텐츠1</h3>
+            <p>컨텐츠 1에 대한 내용</p>
+            <a href="#">컨텐츠1 외부링크</a>
+        </div>
+        <div>
+            <h3>컨텐츠2</h3>
+            <p>컨텐츠 2에 대한 내용</p>
+            <a href="#">컨텐츠2 외부링크</a>
+        </div>
+    </section>
+
+    잘못된 예시
+    <section>
+        <h2>잘못된예시</h2>
+        <h3>컨텐츠1</h3>
+        <p>컨텐츠1에 대한 내용</p>
+        <a href="#">컨텐츠1 외부링크</a>
+        <h3>컨텐츠2</h3>
+        <p>컨텐츠2에 대한 내용</p>
+        <a href="#">컨텐츠2 외부링크</a>
+    </section>
+</xmp>
+                <p>잘못된 예시처럼 구성할수도 있지만 css 작업하기 좋지 못하므로 꼭 성격이 비슷한 내용끼리 묶어주는것을 추천한다.</p>
+            </li>
+            <li>
+                <h2>사이트정보 영역</h2>
+                <p>흔히 footer(푸터)라고 하며 사이트 내에 들어가는 정보들, 사이트이름or회사명, 회사주소, 번호 등등 혹은 copyright 를 넣어준다.</p>
+<xmp>
+    <footer>
+        <h1>회사이름</h1>
+        <ul>
+            <li>사이트명 : 용수 공부장</li>
+            <li>사이트 주소 : seasun93.github.io/YS/</li>
+        </ul>
+        <p>COPYRIGHT 2023 용수공부장 All rights reserved.</p>
+    </footer>
+</xmp>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
