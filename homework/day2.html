@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>용수 공부장 | day2</title>
+    <style>
+        pre {white-space: pre-line;}
+    </style>
+</head>
+<body>
+    <p>다음은 day2에서 배운것을 토대로 실습을 진행할 예정입니다.<br>문제 하단에 태그를 생성하세요.</p>
+    <h1>day2 실습</h1>
+    <ul>
+        <li>
+            <h2>실습1. 다음 조건에 맞춰 웹사이트 구성해보기</h2>
+            <pre>
+    조건0. 사이트의 title은 용수 실습1로 작성해주세요.
+    조건1. 메뉴영역은 로고위치에는 YS, 서브메뉴가 없는 메뉴로 메뉴의 이름은 menu1, menu2, menu3으로 구성되어있습니다.
+    조건2. 컨텐츠 영역은 용수가 좋아하는 음식과 용수가 싫어하는 음식으로 구성되게 작성해주세요.
+    조건3. 사이트정보 영역은 카피라이트만 적어주세요.<br>(카피라이트 작성방법 : copyright 생성년도 로고이름 All rights reserved);
+            </pre>
+<xmp>
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>용수 실습1</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="#">YS</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2 style="display: none;">음식</h2>
+            <div>
+                <h3>좋아하는 음식</h3>
+                <div>
+                    <p>내 입맛에 맞는거, 그 날의 기분에 따라</p>
+                    <p>토스트</p>
+                    <p>감자튀김</p>
+                </div>
+            </div>
+            <div>
+                <h3>싫어하는 음식</h3>
+                <p>내 입맛에 안맞는거, 그 날의 기분에 따라</p>
+                <p>국수(냉면제외)</p>
+            </div>
+        </section>
+        <footer>
+            <p>copyright 2023 YS All rights reserved</p>
+        </footer>
+    </body>
+    </html>
+</xmp>
+        </li>
+        <li>
+            <h2>실습2. 컨텐츠 영역에서 비슷한 내용끼리 div로 묶는 이유는 무엇이라 생각하나요?</h2>
+            <p>
+                <!-- 이곳에 정답을 적어주세요. -->
+                css 작업이 수월하기 때문에
+            </p>
+        </li>
+        <li>
+            <h2>실습3. 서브메뉴가 존재할경우 태그 구성, 서브메뉴가 존재 안할경우 태그 구성을 모두 적어주세요</h2>
+            <p>
+                경로를 나타낼때는 > 를 사용한다.<br>예시 : div>h1>a>img → div안에 h1안에 a안에 img
+            </p>
+            <p>
+                <!-- 이곳에 정답을 적어주세요. -->
+                <span style="display: block;">서브메뉴가 존재할 때</span>
+                1-1. nav > ul > li > a <br>
+                1-2. nav > ul > li > ul > li > a <br>
+                <span style="display: block;">서브메뉴가 존재하지 않을 때</span>
+                2. nav > ul > li > a <br>
+                3. nav > a
+            </p>
+        </li>
+    </ul>
+</body>
+</html>
